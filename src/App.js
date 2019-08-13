@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
-import {Grid} from '@material-ui/core';
-import youtube from './api/youtube';
-
-class App extends Component{
-  render(){
-    return(
+import React, {Component} from 'react'
+import {Grid} from '@material-ui/core'
+import youtube from './api/youtube'
+import {VideoList, VideoDetail, SearchBar} from './components'
+class App extends Component {
+  render () {
+    return (
       <Grid style={{justifyContent: 'center'}} container spacing={10}>
         <Grid item xs={11}>
           <Grid container spacing={10}>
             <Grid item xs={12}> 
-              {/** This is where search bar component will go */}
+              <SearchBar />
             </Grid>
             <Grid item xs={8}>
-             {/** This is where Video Detail component will go */}
+              <VideoDetail />
             </Grid>
             <Grid item xs={4}>
-              {/** This is where VideoList component will go */}
+              <VideoList />
             </Grid>
           </Grid>
         </Grid>
